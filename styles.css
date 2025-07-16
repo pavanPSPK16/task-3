@@ -1,0 +1,162 @@
+/* Reset and Base Styles */
+:root {
+  --primary-color: #3498db; /* Bright blue */
+  --secondary-color: #f1c40f; /* Vibrant orange */
+  --accent-color: #2ecc71; /* Fresh green */
+  --background-color: #f9f9f9; /* Light gray */
+  --text-color: #333; /* Dark gray */
+  --white: #ffffff;
+  --gray-light: #e5e5e5;
+  --gray-medium: #ccc;
+  --success-color: #2ecc71; /* Fresh green */
+  --error-color: #e74c3c; /* Deep red */
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+}
+
+.navbar h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Main Content Grid */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+.quiz-section {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+.question { 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    color: var(--text-color);
+}
+.option { 
+    margin: 8px 0; 
+    padding: 0.5rem 1rem; 
+    color: var(--text-color);
+    border: 1px solid var(--gray-medium); 
+    border-radius: 4px; 
+    transition: var(--transition);
+}
+.option:hover {
+    background: var(--gray-light);
+}
+.result { 
+    margin-top: 20px; 
+    font-weight: bold; 
+    color: var(--success-color);
+}
+.quiz-section .btn{
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.quiz-section .btn:hover {
+    background-color: var(--secondary-color);
+}
+.option.selected {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+.weather-section {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+.weather-section h2 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#city-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+}
+
+#get-weather {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#get-weather:hover {
+  background-color: var(--secondary-color);
+}
+
+#weather-info {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
